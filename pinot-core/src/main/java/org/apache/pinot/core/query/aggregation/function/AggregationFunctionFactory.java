@@ -337,8 +337,8 @@ public class AggregationFunctionFactory {
             return new FourthMomentAggregationFunction(firstArgument, FourthMomentAggregationFunction.Type.KURTOSIS);
           case FOURTHMOMENT:
             return new FourthMomentAggregationFunction(firstArgument, FourthMomentAggregationFunction.Type.MOMENT);
-          case FUNNEL:
-            return new FunnelAggregationFunction(arguments);
+          case FUNNELCOUNT:
+            return new FunnelCountAggregationFunction(arguments);
           case DISTINCTCOUNTTUPLESKETCH:
             // mode actually doesn't matter here because we only care about keys, not values
             return new DistinctCountIntegerTupleSketchAggregationFunction(arguments, IntegerSummary.Mode.Sum);
